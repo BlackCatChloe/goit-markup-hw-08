@@ -1,0 +1,120 @@
+.filter-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filter-list__item {
+    margin-left: 8px;
+
+    &:first-child {
+            margin-left: 0;
+        }
+}
+
+.filter-list__button {
+    background-color: $sub-nav-back-color;
+    border-radius: 4px;
+    border: 1px $sub-nav-back-color;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 22px;
+    padding-left: 22px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $darker-text;
+    cursor: pointer;
+    box-shadow: none;
+
+    transition: background-color 250ms $time-function,
+    color 250ms $time-function, border 250ms $time-function,
+    box-shadow 250ms $time-function;
+
+    &:hover,
+    &:focus,
+    &--activated {
+    background-color: $accent-color;
+    border: 1px $accent-color;
+    color: $super-light-text;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    } 
+
+}
+
+
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $card-set-gap;
+}
+
+.project-list__link {
+    width: 370px;
+    font-size: 16px;
+    line-height: 1.875;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    display: block;
+
+    color: $lighter-text;
+    display: block;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
+    }
+}
+
+.image-holder {
+    position: relative;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff;
+    height: 294px;
+    overflow: hidden;
+}
+
+.image-holder__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    padding-top: 63px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: transform 250ms $time-function;
+
+    .project-list__link:hover & {
+            transform: translateY(0);
+        }
+    
+}
+
+.text-holder {
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.text-holder__title {
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $darker-text;
+}
+
+
+

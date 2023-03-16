@@ -1,0 +1,327 @@
+.header {
+    border-bottom: 1px solid #ececec;
+ }
+
+.header__container {
+    @include centeredFlex();
+    @extend %container;
+  
+
+    @media screen and (max-width:$tablet) {
+        padding-top: 16px;
+        padding-bottom: 10px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+    }
+    @media screen and (max-width:$desktop) {
+        padding-top: 26px;
+         padding-right: 15px;
+        padding-left: 15px;
+    }
+
+}
+.logo {
+    font-family: $logo-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    color: $super-dark-color;
+    margin-right: 94px;
+
+    &--accent {
+        color: $accent-color;
+    }
+
+// до шири таблет ( тільки для мобільних )
+@media screen and (max-width:$tablet) {
+   margin-right: 0;
+
+}
+@media screen and (max-width:$desktop) {
+    margin-right: 88px;
+
+}
+ }
+/* Burger menu */
+
+.burger-menu__button {
+   display: inline-flex;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    z-index: 99;
+    width:40px;
+    height: 40px;
+    margin-left: auto;
+
+
+// від таблет та більше
+    @media screen and (min-width:$tablet) {
+        display: none;
+
+    }
+
+}
+.burger-menu__icon {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    fill:$darker-text;
+    transition: fill 250ms $time-function;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+
+    }
+}
+
+.burger-menu__open {
+    display: block;
+
+    .burger-menu__button.is-open & {
+        display: none;
+    }
+}
+.burger-menu__close {
+    display: none;
+
+    .burger-menu__button.is-open & {
+        display: block;
+    }
+}
+
+/* drop berger menu*/
+
+
+.mob-menu {
+    display: none;
+
+// до шири таблет скриваємо меню в шапці
+    @media screen and (max-width:$tablet) {
+       
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $super-light-text;
+
+        padding-top: 48px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        height:100%;
+        z-index: 80;
+        //тільки моб до таблета
+
+        &.is-open {
+           display: block;
+        }
+      
+    }
+
+}
+.mob-menu__item {
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.mob-menu__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.4;
+    color: $darker-text;
+
+    &--activated {
+        color:$accent-color;
+    }
+}
+
+.mob-media-holder {
+    
+    position: fixed;
+    bottom: 48px;
+
+}
+.mob-contacts__list {
+    margin-bottom: 64px;
+}
+.mob-contacts__item {
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.mob-contacts__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color:$lighter-text;
+
+        &--accent {
+  
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.3;
+        color:$accent-color;
+        }
+}
+
+.mob-media__item {
+    display: inline-flex;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding: 0 10px;
+
+    &:last-child {
+        border:none;
+    }
+}
+.mob-media__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.1;
+    color: $accent-color;
+}
+/* Navigation */
+.navigation {
+   
+    @media screen and (max-width:$tablet) {
+        display: none;
+    }
+}
+
+.navigation-list {
+    display: flex;
+}
+
+.navigation-list__items {
+    margin-right: 50px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @media screen and (max-width:$desktop) {
+     margin-right: 55px;
+
+    }
+}
+
+.navigation__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    color: $darker-text;
+    transition: color 250ms $time-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    &--activated {
+        color: $accent-color;
+    }
+}
+
+.navigation__link--activated::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    height: 4px;
+    width: 100%;
+    border-radius: 3px;
+    background-color: $accent-color;
+}
+/* Contacts */
+
+.contact-list {
+    display: flex;
+    margin-left: auto;
+
+    @media screen and (max-width:$tablet) {
+            display: none;
+        }
+
+     @media screen and (max-width:$desktop) {
+            flex-direction: column;
+    }
+}
+
+.contact-list__item {
+    margin-right: 50px;
+    color: $lighter-text;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @media screen and (max-width:$desktop) {
+     margin-right: 0;
+     margin-bottom: 10px;
+
+     &:last-child {
+        margin: 0;
+     }
+
+    }
+}
+
+.contact-list__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    color: $lighter-text;
+    display: flex;
+    align-items: center;
+    transition: color 250ms $time-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+     @media screen and (max-width:$desktop) {
+        padding-top:0;
+        padding-bottom: 0;
+    }
+}
+
+.contact-list__icon {
+    fill: #757575;
+    margin-right: 10px;
+    transition: fill 250ms var(--time-function);
+
+    .contact-list__link:hover &,
+    .contact-list__link:focus & {
+        fill: $accent-color;
+    }
+}
+
+.contact-list__icon--tel {
+    width: 10px;
+    height: 16px;
+}
+
+.contact-list__icon--mail {
+    width: 16px;
+    height: 12px;
+    margin-top: 3px;
+}

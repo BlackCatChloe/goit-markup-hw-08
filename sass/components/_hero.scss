@@ -1,0 +1,103 @@
+.hero {
+    width:100%;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url("../images/hero-mobi-1x.jpg");
+    background-size: cover;
+    background-color: rgb(47, 48, 58);
+    background-repeat: no-repeat;
+    background-position: center;
+
+   
+
+    @media screen and (max-width:$mobile) {
+    
+            height: 400px;
+            padding-top: 118px;
+            padding-bottom: 118px;
+    
+        }
+    @media screen and (min-width:$mobile) {
+        
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url("../images/hero-tab-1x.jpg");
+        height: 400px;
+        padding-top: 118px;
+        padding-bottom: 118px;
+        
+    }
+     @media screen and (min-width:$tablet) {
+        
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url("../images/hero-desk-1x.jpg");
+        
+    }
+
+    @media screen and (min-width:$desktop) {
+       
+        max-width: 1600px;
+        height: 600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
+
+}
+.hero__container {
+   
+    @extend %container;
+}
+
+
+.hero__text {
+    text-align: center;
+    max-width: 680px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $super-light-text;
+
+    @media screen and (min-width:$mobile) {
+        font-size: 26px;
+        max-width: 360px;
+    }
+
+    @media screen and (min-width:$desktop) {
+        font-size: 44px;
+        max-width:550px;
+    }
+}
+
+
+
+.hero__button {
+    display: block;
+    width: 216px;
+    height: 50px;
+
+    margin-left: auto;
+    margin-right: auto;
+    
+    color: $super-light-text;    
+    background: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 1px $accent-color;
+    border-radius: 4px;
+   
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    cursor: pointer;
+}

@@ -1,0 +1,106 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms $time-function,
+    visibility 250ms $time-function;
+
+    @media screen and (max-width:$mobile) {
+        overflow-y: scroll; 
+        min-width:$mobile;
+    }
+     @media screen and (max-width:$desktop) {
+         overflow-y: scroll;
+      
+    }
+
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+
+
+/* when modal is open  */
+.modal {
+    padding: 40px 35px;
+    background-color: #fff;
+    border-radius: 5px;
+
+    @media screen and (max-width:$tablet) {
+        max-width:450px;
+        width: 100%;
+        padding:40px; 
+        margin-top: 93px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+    }
+    @media screen and (min-width:$tablet) {
+        max-width: 450px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+       
+        transform: translate(-50%, -50%);
+        transition: transform 250ms $time-function;
+        }
+     @media screen and (min-width:$desktop) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 528px;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        transition: transform 250ms $time-function;
+    }
+}
+
+/* when modal is closed  */
+// .backdrop.is-hidden .modal {
+//     transform: translate(-50%, -50%) scale(0.9);
+// }
+
+.close-modal {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+    background-color: transparent;
+
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+
+}
+
+.close-modal:hover {
+    cursor: pointer;
+}
+
+.close-modal__icon {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    fill: $darker-text;
+    transition: fill 250ms $time-function;
+
+    .close-modal:hover & {
+            fill: $accent-color;
+        }
+}
+
+
+
