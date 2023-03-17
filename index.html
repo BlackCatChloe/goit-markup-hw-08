@@ -144,17 +144,6 @@
 
       <section class="section">
         <div class="section__container">
-          <ul class="list">
-            <li class="list-item">1</li>
-            <li class="list-item">2</li>
-            <li class="list-item">3</li>
-            <li class="list-item">4</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- <section class="section">
-        <div class="section__container">
           <ul class="preferences-list">
             <li class="preferences-list__item">
               <div class="preferences-list__thumb">
@@ -205,8 +194,8 @@
             </li>
           </ul>
         </div>
-      </section> -->
-      <!-- <section class="section section--no-padding">
+      </section>
+      <section class="section section--no-padding no-mobile">
         <div class="section__container">
           <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="example-list">
@@ -263,10 +252,11 @@
             <li class="emloyer-list__item">
               <img
                 class="employer-list__image"
+                srcset="./images/person1-m-1x.jpg 1x, ./images/person1-m-2x.jpg 2x"
                 src="./images/01.jpg"
                 alt="чоловік в красній сорочці"
                 width="270"
-                height="260"
+               
               />
               <div class="employer-list__metaholder">
                 <h3 class="employer-list__title">Ігор Дем'яненко</h3>
@@ -306,10 +296,11 @@
             <li class="emloyer-list__item">
               <img
                 class="employer-list__image"
+                srcset="./images/person2-m-1x.jpg 1x, ./images/person2-m-2x.jpg 2x"
                 src="./images/02.jpg"
                 alt="жінка в костюмі"
                 width="270"
-                height="260"
+               
               />
               <div class="employer-list__metaholder">
                 <h3 class="employer-list__title">Ольга Рєпіна</h3>
@@ -349,10 +340,11 @@
             <li class="emloyer-list__item">
               <img
                 class="employer-list__image"
+                srcset="./images/person3-m-1x.jpg 1x, ./images/person3-m-2x.jpg 2x"
                 src="./images/03.jpg"
                 alt="чоловік в блакитній сорочці"
                 width="270"
-                height="260"
+               
               />
               <div class="employer-list__metaholder">
                 <h3 class="employer-list__title">Микола Тарасов</h3>
@@ -392,10 +384,11 @@
             <li class="emloyer-list__item">
               <img
                 class="employer-list__image"
+                srcset="./images/person4-m-1x.jpg 1x, ./images/person4-m-2x.jpg 2x"
                 src="./images/04.jpg"
                 alt="чоловік в чорній сорочці"
                 width="270"
-                height="260"
+                
               />
               <div class="employer-list__metaholder">
                 <h3 class="employer-list__title">Михайло Єрмаков</h3>
@@ -484,7 +477,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Modal  -->
 
       <div class="backdrop is-hidden" data-modal>
@@ -565,68 +558,70 @@
         </div>
       </div>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="footer__container">
-        <div class="footer__contacts">
-          <a href="" class="logo footer__logo" lang="en"
-            ><span class="logo--accent">Web</span>Studio</a
-          >
-          <address class="address">
-            <ul class="address-list">
-              <li class="address-list__item">
-                <a
-                  href="https://goo.gl/maps/kVRiSg8nGxtDqrdu7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="address-list__link address-list__link--punson"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
+        <div class="footer__tab-holder">
+          <div class="footer__contacts">
+            <a href="" class="logo footer__logo" lang="en"
+              ><span class="logo--accent">Web</span>Studio</a
+            >
+            <address class="address">
+              <ul class="address-list">
+                <li class="address-list__item">
+                  <a
+                    href="https://goo.gl/maps/kVRiSg8nGxtDqrdu7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="address-list__link address-list__link--punson"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="address-list__item">
+                  <a href="mailto:info@devstudio.com" class="address-list__link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="aaddress-list__item">
+                  <a href="tel:+380961111111" class="address-list__link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="media">
+            <h2 class="media__title">приєднуйтесь</h2>
+            <ul class="media-list">
+              <li class="media-list__items">
+                <a href="#" class="media-list__link media-list__link--dark">
+                  <svg class="media-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address-list__item">
-                <a href="mailto:info@devstudio.com" class="address-list__link"
-                  >info@devstudio.com</a
-                >
+              <li class="media-list__items">
+                <a href="#" class="media-list__link media-list__link--dark">
+                  <svg class="media-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="aaddress-list__item">
-                <a href="tel:+380961111111" class="address-list__link"
-                  >+38 096 111 11 11</a
-                >
+              <li class="media-list__items">
+                <a href="#" class="media-list__link media-list__link--dark">
+                  <svg class="media-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="media-list__items">
+                <a href="#" class="media-list__link media-list__link--dark">
+                  <svg class="media-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="media">
-          <h2 class="media__title">приєднуйтесь</h2>
-          <ul class="media-list">
-            <li class="media-list__items">
-              <a href="#" class="media-list__link media-list__link--dark">
-                <svg class="media-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="media-list__items">
-              <a href="#" class="media-list__link media-list__link--dark">
-                <svg class="media-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="media-list__items">
-              <a href="#" class="media-list__link media-list__link--dark">
-                <svg class="media-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="media-list__items">
-              <a href="#" class="media-list__link media-list__link--dark">
-                <svg class="media-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <form action="#" class="newsletter-form">
           <label for="email" class="newsletter__label">
@@ -641,7 +636,7 @@
               class="newsletter__input"
             />
             <button type="submit" class="newsletter__btn">
-              Підписатися
+              Підпишіться
               <svg class="newsletter__icon" width="24" height="24">
                 <use href="./images/icons.svg#plane"></use>
               </svg>
@@ -649,7 +644,7 @@
           </div>
         </form>
       </div>
-    </footer> -->
+    </footer>
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>

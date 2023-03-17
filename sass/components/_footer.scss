@@ -1,7 +1,13 @@
 .footer__container {
-    display: flex;
-    align-items: center;
+
     @extend %container;
+
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .footer {
@@ -11,7 +17,18 @@
 }
 
 .footer__contacts {
-    margin-right: 65px;
+   width:100%;
+   text-align: center;
+
+   @media screen and (min-width:$tablet) {
+    width:auto;
+   }
+
+   @media screen and (min-width:$desktop) {
+        margin-right: 65px;
+        
+        text-align: left;
+    }
 }
 
 .footer__logo {
@@ -21,6 +38,11 @@
 
 .address {
     margin-top: 20px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width:$tablet) {
+        margin-bottom: 0;
+    }
 }
 
 .address-list__item {
@@ -50,9 +72,15 @@
     color: $super-light-text;
     text-decoration: none;
 }
+.media {
+    width: 100%;
+    margin-bottom: 60px;
 
-
-
+    @media screen and (min-width:$tablet) {
+        width:auto;
+        margin-bottom: 0;
+    }
+}
 .media__title,
 .newsletter__label {
     font-weight: 700;
@@ -63,5 +91,30 @@
     color: $super-light-text;
     margin-bottom: 20px;
     display: block;
-}
+    text-align: center;
 
+    @media screen and (min-width:$desktop) {
+        text-align: left;
+    }
+}
+.footer__tab-holder {
+    display: flex;
+    flex-wrap: wrap;
+      
+    
+    @media screen and (min-width:$tablet) {
+        width: 100%;
+        flex-direction: row; 
+        justify-content: space-between;
+        padding-left: 76px;
+        padding-right: 89px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width:$desktop) {
+        width: auto;
+        justify-content: left;
+        align-items: baseline;
+        padding: 0;
+    }
+}

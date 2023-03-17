@@ -24,6 +24,8 @@ ol {
 
 img {
     display: block;
+    width:100%;
+    height: auto;
 }
 body {
     font-family: $font;
@@ -48,4 +50,11 @@ body {
   &--no-padding {
       padding-top: 0;
   }
+
+  @media screen and (max-width:$desktop) {
+    &.no-mobile {
+        display: none;
+      }
+  }
+  
 }

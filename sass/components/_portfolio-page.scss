@@ -1,15 +1,24 @@
 .filter-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 50px;
+
+    @media screen and (min-width:$tablet) {
+        justify-content: center;
+    }
 }
 
 .filter-list__item {
-    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 15px;
 
-    &:first-child {
-            margin-left: 0;
+    &:last-child {
+            margin-right: 0;
         }
+
+     @media screen and (min-width:$tablet) {
+        margin-bottom: 0;
+    }
 }
 
 .filter-list__button {
@@ -50,25 +59,36 @@
 .project-list {
     display: flex;
     flex-wrap: wrap;
-    gap: $card-set-gap;
-}
+    gap: 30px;
 
-.project-list__link {
-    width: 370px;
-    font-size: 16px;
-    line-height: 1.875;
+    @media screen and (min-width:$tablet) {
+        margin-right: -30px;
+    }
+    
+}
+.project-list__item {
+    width:100%;
+
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
-    display: block;
 
-    color: $lighter-text;
-    display: block;
+    @media screen and (min-width:$tablet) {
+        width:calc((100% - 4 * 15px) / 2);
+    }
+    @media screen and (min-width:$desktop) {
+        width:calc((100% - 6 * 15px) / 3);
+    }
 
     &:hover,
     &:focus {
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
     }
+}
+.project-list__link {   
+    font-size: 16px;
+    line-height: 1.875;
+    color: $lighter-text;       
 }
 
 .image-holder {

@@ -1,11 +1,20 @@
 /* newsletter form */
 .newsletter-form {
-    margin-left: auto;
+
+    @media screen and (min-width:$desktop) {
+        margin-left: auto;
+        width:auto;
+    }
 }
 
 .newsletter-form__input-holder {
     display: flex;
     align-items: center;
+    flex-direction: column;
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+    }
 }
 
 .newsletter__input {
@@ -15,13 +24,26 @@
     background-color: transparent;
 
     padding: 15px 16px;
-    width: 358px;
-    margin-right: 12px;
+    width: 100%;
+    
 
     font-size: 16px;
     line-height: 1.25;
 
     color: rgba(255, 255, 255, 0.6);
+
+    margin-bottom: 20px;
+
+    @media screen and (min-width:$tablet) {
+       width:450px; 
+    }
+
+    @media screen and (min-width:$desktop) {
+        width: 358px;
+
+        margin-bottom: 0;
+        margin-right: 12px;
+    }
 }
 
 .newsletter__btn {
@@ -33,8 +55,8 @@
 
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-left: 35px;
+    padding-right: 35px;
 
     font-weight: 700;
     font-size: 16px;
@@ -44,6 +66,11 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+
+    @media screen and (min-width:$desktop) {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
 }
 
 .newsletter__icon {

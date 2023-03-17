@@ -36,11 +36,12 @@
 // до шири таблет ( тільки для мобільних )
 @media screen and (max-width:$tablet) {
    margin-right: 0;
+   font-size: 24px;
 
 }
 @media screen and (max-width:$desktop) {
     margin-right: 88px;
-
+    font-size: 24px;
 }
  }
 /* Burger menu */
