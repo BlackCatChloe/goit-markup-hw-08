@@ -6,13 +6,14 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
+    z-index: 100;
     visibility: visible;
     transition: opacity 250ms $time-function,
     visibility 250ms $time-function;
 
     @media screen and (max-width:$mobile) {
         overflow-y: scroll; 
-        min-width:$mobile;
+      
     }
      @media screen and (max-width:$desktop) {
          overflow-y: scroll;
@@ -35,6 +36,8 @@
     background-color: #fff;
     border-radius: 5px;
 
+   
+
     @media screen and (max-width:$tablet) {
         max-width:450px;
         width: 100%;
@@ -43,6 +46,11 @@
         margin-right: auto;
         margin-left: auto;
         position: relative;
+    }
+    @media screen and (max-width:$mobile) {
+        max-width: calc (100%-5%);
+        margin-right: auto;
+        margin-left: auto;
     }
     @media screen and (min-width:$tablet) {
         max-width: 450px;

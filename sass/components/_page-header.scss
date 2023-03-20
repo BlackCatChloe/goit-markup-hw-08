@@ -55,6 +55,9 @@
     width:40px;
     height: 40px;
     margin-left: auto;
+    // position: absolute;
+    // right: 15px;
+    // top:15px;
 
 
 // від таблет та більше
@@ -85,19 +88,24 @@
         display: none;
     }
 }
-.burger-menu__close {
-    display: none;
+// .burger-menu__close {
+//     display: block;
 
-    .burger-menu__button.is-open & {
-        display: block;
-    }
+//     .burger-menu__button.is-open & {
+//         display: block;
+//     }
+// }
+.burder-menu__closebtn {
+    position: absolute;
+    top:25px;
+    right:15px;
 }
 
 /* drop berger menu*/
 
-
 .mob-menu {
     display: none;
+    z-index: 99;
 
 // до шири таблет скриваємо меню в шапці
     @media screen and (max-width:$tablet) {
@@ -106,22 +114,32 @@
         top: 0;
         left: 0;
         width: 100%;
+        height:100vh;
         background-color: $super-light-text;
 
-        padding-top: 48px;
-        padding-left: 40px;
-        padding-right: 40px;
+        background-color: #fff;
 
-        height:100%;
-        z-index: 80;
         //тільки моб до таблета
 
         &.is-open {
-           display: block;
+          display: block;
         }
       
     }
 
+}
+.mob-menu__container {
+    @extend %container;
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+
+    padding-top: 48px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .mob-menu__item {
     margin-bottom: 32px;
@@ -137,15 +155,24 @@
     line-height: 1.4;
     color: $darker-text;
 
-    &--activated {
+    &--activated,
+    &:hover,
+    &:active {
         color:$accent-color;
+    }
+
+    @media screen and (max-width:$mobile) {
+        font-size: 20px;
+        
     }
 }
 
 .mob-media-holder {
     
-    position: fixed;
-    bottom: 48px;
+    // position: fixed;
+    // bottom: 48px;
+    margin-top: auto;
+    margin-bottom: 48px;
 
 }
 .mob-contacts__list {
@@ -172,6 +199,11 @@
         line-height: 1.3;
         color:$accent-color;
         }
+    
+    @media screen and (max-width:$mobile) {
+        font-size: 18px;
+        
+    }
 }
 
 .mob-media__item {
@@ -182,6 +214,10 @@
     &:last-child {
         border:none;
     }
+
+    @media screen and (max-width:$mobile) {
+        padding: 0 4px;
+    }
 }
 .mob-media__link {
     font-style: normal;
@@ -189,6 +225,11 @@
     font-size: 18px;
     line-height: 1.1;
     color: $accent-color;
+
+    @media screen and (max-width:$mobile) {
+        font-size: 12px;
+        
+    }
 }
 /* Navigation */
 .navigation {

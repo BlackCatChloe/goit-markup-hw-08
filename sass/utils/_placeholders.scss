@@ -5,13 +5,14 @@
     padding-left: 15px;
     width: 100%;
 
+
     @media screen and (min-width:$mobile) {
-        min-width: $mobile;
+        width: $mobile;
         
     }
 
     @media screen and (min-width:$tablet) {
-        min-width: $tablet;
+        width: $tablet;
         
     }
 
