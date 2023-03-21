@@ -98,14 +98,14 @@
           </button>
           <ul class="mob-menu__list">
             <li class="mob-menu__item">
-              <a
-                href="index.html"
-                class="mob-menu__link mob-menu__link--activated"
-                >Студія</a
-              >
+              <a href="index.html" class="mob-menu__link">Студія</a>
             </li>
             <li class="mob-menu__item">
-              <a href="portfolio.html" class="mob-menu__link">Портфоліо</a>
+              <a
+                href="portfolio.html"
+                class="mob-menu__link mob-menu__link--activated"
+                >Портфоліо</a
+              >
             </li>
             <li class="mob-menu__item">
               <a href="" class="mob-menu__link">Контакти</a>
@@ -179,16 +179,34 @@
             <li class="project-list__item">
               <a href="" class="project-list__link">
                 <div class="image-holder">
-                  <img
-                    srcset="
-                      ./images/img.jpg    480w,
-                      ./images/img2x.jpg  768w,
-                      ./images/img3x.jpg 1200w
-                    "
-                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
-                    src="./images/img.jpg"
-                    alt="опис зображення 1"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/imgpdesk1x-min.jpg 1x,
+                        ./images/imgpdesk2x-min.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgptab1x-min.jpg 1x,
+                        ./images/imgptab2x-min.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgpmob1x-min.jpg 1x,
+                        ./images/imgpmob2x-min.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img src="./images/imgpmob1x-min.jpg" alt="item1" />
+                  </picture>
                   <div class="image-holder__overlay">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -207,16 +225,34 @@
             <li class="project-list__item">
               <a href="" class="project-list__link">
                 <div class="image-holder">
-                  <img
-                    srcset="
-                      ./images/img-1.jpg    480w,
-                      ./images/img2x-1.jpg  768w,
-                      ./images/img3x-1.jpg 1200w
-                    "
-                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
-                    src="./images/img-1.jpg"
-                    alt="опис зображення 2"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/imgpdesk1x-1-min.jpg 1x,
+                        ./images/imgpdesk2x-1-min.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgptab1x-1-min.jpg 1x,
+                        ./images/imgptab2x-1-min.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgpmob1x-1-min.jpg 1x,
+                        ./images/imgpmob2x-1-min.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img src="./images/imgpmob1x-1-min.jpg" alt="item2" />
+                  </picture>
                   <div class="image-holder__overlay">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -237,16 +273,34 @@
             <li class="project-list__item">
               <a href="" class="project-list__link">
                 <div class="image-holder">
-                  <img
-                    srcset="
-                      ./images/img-2.jpg    480w,
-                      ./images/img2x-2.jpg  768w,
-                      ./images/img3x-2.jpg 1200w
-                    "
-                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
-                    src="./images/img-2.jpg"
-                    alt="опис зображення 3"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/imgpdesk1x-2-min.jpg 1x,
+                        ./images/imgpdesk2x-2-min.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgptab1x-2-min.jpg 1x,
+                        ./images/imgptab2x-2-min.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgpmob1x-2-min.jpg 1x,
+                        ./images/imgpmob2x-2-min.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img src="./images/imgpmob1x-2-min.jpg" alt="item3" />
+                  </picture>
                   <div class="image-holder__overlay">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -265,16 +319,34 @@
             <li class="project-list__item">
               <a href="" class="project-list__link">
                 <div class="image-holder">
-                  <img
-                    srcset="
-                      ./images/img-3.jpg    480w,
-                      ./images/img2x-3.jpg  768w,
-                      ./images/img3x-3.jpg 1200w
-                    "
-                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
-                    src="./images/img-3.jpg"
-                    alt="опис зображення 4"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/imgpdesk1x-3-min.jpg 1x,
+                        ./images/imgpdesk2x-3-min.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgptab1x-3-min.jpg 1x,
+                        ./images/imgptab2x-3-min.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgpmob1x-3-min.jpg 1x,
+                        ./images/imgpmob2x-3-min.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img src="./images/imgpmob1x-3-min.jpg" alt="item4" />
+                  </picture>
                   <div class="image-holder__overlay">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -293,16 +365,34 @@
             <li class="project-list__item">
               <a href="" class="project-list__link">
                 <div class="image-holder">
-                  <img
-                    srcset="
-                      ./images/img-4.jpg    480w,
-                      ./images/img2x-4.jpg  768w,
-                      ./images/img3x-4.jpg 1200w
-                    "
-                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
-                    src="./images/img-4.jpg"
-                    alt="опис зображення 5"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/imgpdesk1x-4-min.jpg 1x,
+                        ./images/imgpdesk2x-4-min.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgptab1x-4-min.jpg 1x,
+                        ./images/imgptab2x-4-min.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgpmob1x-4-min.jpg 1x,
+                        ./images/imgpmob2x-4-min.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img src="./images/imgpmob1x-4-min.jpg" alt="item5" />
+                  </picture>
                   <div class="image-holder__overlay">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -321,16 +411,34 @@
             <li class="project-list__item">
               <a href="" class="project-list__link">
                 <div class="image-holder">
-                  <img
-                    srcset="
-                      ./images/img-5jpg     480w,
-                      ./images/img2x-5.jpg  768w,
-                      ./images/img3x-5.jpg 1200w
-                    "
-                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
-                    src="./images/img-5.jpg"
-                    alt="опис зображення 6"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/imgpdesk1x-5-min.jpg 1x,
+                        ./images/imgpdesk2x-5-min.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgptab1x-5-min.jpg 1x,
+                        ./images/imgptab2x-5-min.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgpmob1x-5-min.jpg 1x,
+                        ./images/imgpmob2x-5-min.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img src="./images/imgpmob1x-5-min.jpg" alt="item6" />
+                  </picture>
                   <div class="image-holder__overlay">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -349,16 +457,34 @@
             <li class="project-list__item">
               <a href="" class="project-list__link">
                 <div class="image-holder">
-                  <img
-                    srcset="
-                      ./images/img-6.jpg    480w,
-                      ./images/img2x-6.jpg  768w,
-                      ./images/img3x-6.jpg 1200w
-                    "
-                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
-                    src="./images/img-6.jpg"
-                    alt="опис зображення 7"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/imgpdesk1x-6-min.jpg 1x,
+                        ./images/imgpdesk2x-6-min.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgptab1x-6-min.jpg 1x,
+                        ./images/imgptab2x-6-min.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgpmob1x-6-min.jpg 1x,
+                        ./images/imgpmob2x-6-min.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img src="./images/imgpmob1x-6-min.jpg" alt="item7" />
+                  </picture>
                   <div class="image-holder__overlay">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -377,16 +503,34 @@
             <li class="project-list__item">
               <a href="" class="project-list__link">
                 <div class="image-holder">
-                  <img
-                    srcset="
-                      ./images/img-7.jpg    480w,
-                      ./images/img2x-7.jpg  768w,
-                      ./images/img3x-7.jpg 1200w
-                    "
-                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
-                    src="./images/img-7.jpg"
-                    alt="опис зображення 8"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/imgpdesk1x-7-min.jpg 1x,
+                        ./images/imgpdesk2x-7-min.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgptab1x-7-min.jpg 1x,
+                        ./images/imgptab2x-7-min.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgpmob1x-7-min.jpg 1x,
+                        ./images/imgpmob2x-7-min.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img src="./images/imgpmob1x-7-min.jpg" alt="item8" />
+                  </picture>
                   <div class="image-holder__overlay">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -405,16 +549,34 @@
             <li class="project-list__item">
               <a href="" class="project-list__link">
                 <div class="image-holder">
-                  <img
-                    srcset="
-                      ./images/img-8.jpg    480w,
-                      ./images/img2x-8.jpg  768w,
-                      ./images/img3x-8.jpg 1200w
-                    "
-                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
-                    src="./images/img-8.jpg"
-                    alt="опис зображення 9"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/imgpdesk1x-8-min.jpg 1x,
+                        ./images/imgpdesk2x-8-min.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgptab1x-8-min.jpg 1x,
+                        ./images/imgptab2x-8-min.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgpmob1x-8-min.jpg 1x,
+                        ./images/imgpmob2x-8-min.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img src="./images/imgpmob1x-8-min.jpg" alt="item9" />
+                  </picture>
                   <div class="image-holder__overlay">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем

@@ -371,7 +371,7 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .header__container {
-    padding-top: 26px;
+    padding-top: 21px;
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -716,6 +716,8 @@ body {
   background-color: rgb(47, 48, 58);
   background-repeat: no-repeat;
   background-position: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .hero {
@@ -1760,7 +1762,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .project-list__item {
-    width: calc((100% - 90px) / 3);
+    width: 370px;
   }
 }
 
@@ -1786,9 +1788,13 @@ body {
   color: #ffffff;
   overflow: hidden;
 }
+@media screen and (max-width: 480px) {
+  .image-holder {
+    font-size: 14px;
+  }
+}
 @media screen and (min-width: 768px) {
   .image-holder {
-    width: 354px;
     height: 296px;
   }
 }
@@ -1800,6 +1806,11 @@ body {
 
 .image-holder img {
   height: 294px;
+}
+@media screen and (max-width: 480px) {
+  .image-holder img {
+    height: auto;
+  }
 }
 
 .image-holder__overlay {
@@ -1822,6 +1833,11 @@ body {
 .project-list__link:hover .image-holder__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+@media screen and (max-width: 480px) {
+  .image-holder__overlay {
+    padding-top: 29px;
+  }
 }
 @media screen and (min-width: 768px) {
   .image-holder__overlay {
